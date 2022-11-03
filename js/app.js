@@ -19,16 +19,26 @@ $(document).ready(function(){
 
 // start nav bar
 
-function dropbtn(){
-    document.getElementById('mydropdown').classList.toggle('show');
+function dropbtn(e){
+    // document.getElementById('mydropdown').classList.toggle('show');
+
+    // undefined
+    // console.log(this.nextElementSibling);
+
+    // console.log(e);
+    // console.log(e.target);
+    // console.log(e.target.nextElementSibling);
+
+    e.target.nextElementSibling.classList.toggle("show");
 }
 
 function dropfilter(){
     var getsearch, filter, getdropdiv, getlinks, linkvalue;
     getsearch = document.getElementById("search");
     filter = getsearch.value.toUpperCase();
-    getdropdiv = document.getElementById("mydropdown");
-    getlinks = getdropdiv.getElementsByTagName("a");
+    // getdropdiv = document.getElementById("mydropdown");
+    // getlinks = getdropdiv.getElementsByTagName("a");
+    getlinks = document.querySelectorAll(".mydropdowns a");
     // console.log(getlinks);
 
     for(var x = 0; x < getlinks.length; x++){
@@ -90,5 +100,52 @@ setInterval(autoload,2500);
 // end auto background
 
 // End Header
+
+// Start Testimonials Section
+
+const getcompanyname = document.querySelector(".companyname");
+const getrole = document.querySelector(".role");
+const gettestimonial = document.querySelector(".testimonial");
+
+const testimonialdatas  = [
+    {
+        name: "Rich Start Resturant",
+        position: "Our Outlet",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+
+    {
+        name: "48 Sky Bar Cafe",
+        position: "Partner",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+
+    {
+        name: "Cool Land Swimming Pool",
+        position: "Our Client",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+
+    {
+        name: "52 Beach Hotel",
+        position: "Our Branch",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+
+    {
+        name: "Chaung Thar SPA",
+        position: "Our Business",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+]
+
+let idx = 0;
+function updatetestimonial(){
+    
+}
+
+setInterval(updatetestimonial,10000);
+
+// End Testimonials Section
 
 // End JS Area

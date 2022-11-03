@@ -52,6 +52,8 @@ header{
     background-color: #f6f6f6;
 
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
 
     display: none;
@@ -266,3 +268,52 @@ header{
 }
 
 /* End Our Services Section */
+
+/* Start Testimonials Section */
+
+.testimonial-container{
+    position: relative;
+}
+
+.fa-quotes{
+    color: rgba(255,255,255,.3);
+    font-size: 28px;
+    position: absolute;
+    top: 40px;
+}
+
+.fa-quote-right{
+    left: 0;
+}
+
+.fa-quote-left{
+    right: 0;
+}
+
+.testimonial{
+    line-height: 30px;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 4px;
+    background-color: tomato;
+    transform-origin: left;
+
+    animation-name: myincrement;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myincrement{
+    0%{
+        transform: scaleX(0);
+    }
+
+    /* 100%{
+        transform: scaleX(1);
+    } */
+}
+
+/* End Testimonials Section */
