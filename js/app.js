@@ -141,9 +141,24 @@ const testimonialdatas  = [
 
 let idx = 0;
 function updatetestimonial(){
-    
+    // getcompanyname.textContent = testimonialdatas[idx].name;
+    // getrole.textContent = testimonialdatas[idx].position;
+    // gettestimonial.textContent = testimonialdatas[idx].text;
+
+    const {name,position,text} = testimonialdatas[idx];
+
+    getcompanyname.textContent = name;
+    getrole.textContent = position;
+    gettestimonial.textContent = text;
+
+    idx++;
+
+    if(idx > testimonialdatas.length - 1){
+        idx = 0;
+    }
 }
 
+updatetestimonial();
 setInterval(updatetestimonial,10000);
 
 // End Testimonials Section
