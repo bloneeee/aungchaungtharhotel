@@ -317,3 +317,96 @@ header{
 }
 
 /* End Testimonials Section */
+
+/* Start ADV Text Section */
+
+.adv-container{
+    height: 400px;
+    background-image: url('./../assets/img/banner/banner11.jpg');
+    background-size: cover;
+
+    position: relative;
+}
+
+.advtext{
+    font-family: sans-serif;
+    width: 50%;
+    background-color: #fff;
+    color: #000;
+
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+
+    padding: 5px;
+    /* margin: auto; */
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    mix-blend-mode: screen;
+}
+
+.adv-container:hover{
+    animation: myadvani 3s linear infinite alternate;
+}
+
+@keyframes myadvani{
+    0%{
+        background-image: url('./../assets/img/banner/banner11.jpg');
+    }
+
+    50%{
+        background-image: url('./../assets/img/banner/banner10.jpg');
+    }
+
+    100%{
+        background-image: url('./../assets/img/banner/banner12.jpg');
+    }
+}
+
+/* End ADV Text Section */
+
+/* Start Staffs Section */
+
+.cards{
+    width: 300px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 0; /* for remove padding in cards, cuz of row */
+    margin: auto;
+}
+
+.cards img{
+    width: 100%;
+}
+
+.title{
+    font-size: 18px;
+    color: grey;
+}
+
+.cards a{
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+}
+
+.cards button{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+
+    padding: 8px;
+    border: none;
+    outline: 0;
+}
+
+.cards button:hover{
+    opacity: 0.7;
+}
+
+/* End Staffs Sectioin */
