@@ -170,7 +170,7 @@ function filterby(keyword){
     // console.log(keyword);
 
     var getpropertylists = document.querySelectorAll(".propertylists");
-    getpropertylists.forEach(getpropertylist => {
+    [...getpropertylists].forEach(getpropertylist => {
         getpropertylist.classList.remove("activeitems");
         if(getpropertylist.innerText.split(" /")[0].toLowerCase() === keyword.toLowerCase()){
             getpropertylist.classList.add("activeitems");
@@ -197,7 +197,7 @@ function filterby(keyword){
         // console.log(getfilters[x]);
         // console.log(getfilters[x].className.indexOf(keyword) > -1);
 
-        if(keyword === "all"){
+        if(keyword.toLowerCase() === "all"){
             addshowclass(getfilters[x], 'show');
         }else{
             removeshowclass(getfilters[x], 'show');
