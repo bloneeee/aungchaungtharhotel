@@ -410,3 +410,25 @@ header{
 }
 
 /* End Staffs Sectioin */
+
+/* Start Property Section */
+
+.propertylists{
+    color: #777;
+    user-select: none;
+    cursor: pointer;
+}
+
+.activeitems{
+    color: #000;
+}
+
+.filters{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+/* End Property Section */

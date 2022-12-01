@@ -163,4 +163,88 @@ setInterval(updatetestimonial,10000);
 
 // End Testimonials Section
 
+// Start Property Section 
+
+filterby("all");
+function filterby(keyword){
+    // console.log(keyword);
+
+    var getpropertylists = document.querySelectorAll(".propertylists");
+    getpropertylists.forEach(getpropertylist => {
+        getpropertylist.classList.remove("activeitems");
+        if(getpropertylist.innerText.split(" /")[0].toLowerCase() === keyword.toLowerCase()){
+            getpropertylist.classList.add("activeitems");
+        }
+    });
+
+    var getfilters = document.getElementsByClassName('filters');
+    // console.log(getfilters);
+
+    // if(keyword === "all"){
+        
+    // }
+    // for(var x = 0; x < getfilters.length; x++){
+    //     // console.log(getfilters[x]);
+    //     // console.log(getfilters[x].className.indexOf(keyword) > -1);
+
+    //     removeshowclass(getfilters[x], 'show');
+    //     if(getfilters[x].className.indexOf(keyword) > -1){
+    //         addshowclass(getfilters[x], 'show');
+    //     }
+    // }
+    
+    for(var x = 0; x < getfilters.length; x++){
+        // console.log(getfilters[x]);
+        // console.log(getfilters[x].className.indexOf(keyword) > -1);
+
+        if(keyword === "all"){
+            addshowclass(getfilters[x], 'show');
+        }else{
+            removeshowclass(getfilters[x], 'show');
+            if(getfilters[x].className.indexOf(keyword) > -1){
+                addshowclass(getfilters[x], 'show');
+            }
+        }
+    }
+}
+
+function addshowclass(ele,opt){
+    // console.log(ele);
+    var getfilters = ele.className.split(" ");
+    // console.log(getfilters);
+
+    var getopt = opt.split(" ");
+    // console.log(getopt);
+    // console.log(getopt.length);
+    // console.log(opt.length);
+
+    for(var y = 0; y < getopt.length; y++){
+        // console.log(getopt[y]);
+        // console.log(getfilters.indexOf(getopt[y]) === -1);
+
+        if(getfilters.indexOf(getopt[y]) === -1){
+            // ele.classList.add(getopt[y]);
+            ele.className += " " + getopt[y];
+        }
+    }
+}
+
+function removeshowclass(ele, opt){
+    // console.log(ele);
+    
+    var getfilters = ele.className.split(" ");
+    // console.log(getfilters);
+
+    var getopt = opt.split(" ");
+    // console.log(getopt);
+
+    for(var z = 0; z < getopt.length; z++){
+        if(!(getfilters.indexOf(getopt[z]) === -1)){
+            ele.className = ele.className.replace(" " + getopt[z], "");
+        }
+    }
+}
+
+// End Property Section
+
 // End JS Area
