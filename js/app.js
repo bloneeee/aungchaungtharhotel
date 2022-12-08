@@ -169,42 +169,21 @@ filterby("all");
 function filterby(keyword){
     // console.log(keyword);
 
-    var getpropertylists = document.querySelectorAll(".propertylists");
-    [...getpropertylists].forEach(getpropertylist => {
-        getpropertylist.classList.remove("activeitems");
-        if(getpropertylist.innerText.split(" /")[0].toLowerCase() === keyword.toLowerCase()){
-            getpropertylist.classList.add("activeitems");
-        }
-    });
-
     var getfilters = document.getElementsByClassName('filters');
     // console.log(getfilters);
 
-    // if(keyword === "all"){
-        
-    // }
-    // for(var x = 0; x < getfilters.length; x++){
-    //     // console.log(getfilters[x]);
-    //     // console.log(getfilters[x].className.indexOf(keyword) > -1);
-
-    //     removeshowclass(getfilters[x], 'show');
-    //     if(getfilters[x].className.indexOf(keyword) > -1){
-    //         addshowclass(getfilters[x], 'show');
-    //     }
-    // }
+    if(keyword === "all"){
+        keyword = '';
+    }
     
     for(var x = 0; x < getfilters.length; x++){
         // console.log(getfilters[x]);
         // console.log(getfilters[x].className.indexOf(keyword) > -1);
 
-        if(keyword.toLowerCase() === "all"){
+        removeshowclass(getfilters[x], 'show');
+        if(getfilters[x].className.indexOf(keyword) > -1){
             addshowclass(getfilters[x], 'show');
-        }else{
-            removeshowclass(getfilters[x], 'show');
-            if(getfilters[x].className.indexOf(keyword) > -1){
-                addshowclass(getfilters[x], 'show');
-            }
-        }
+        }  
     }
 }
 
@@ -237,14 +216,57 @@ function removeshowclass(ele, opt){
 
     var getopt = opt.split(" ");
     // console.log(getopt);
+    // console.log(getopt.length);
 
-    for(var z = 0; z < getopt.length; z++){
-        if(!(getfilters.indexOf(getopt[z]) === -1)){
-            ele.className = ele.className.replace(" " + getopt[z], "");
+    for(var k = 0; k < getfilters.length; k++){
+        // console.log(getfilters);
+        // console.log(getfilters[0]);
+        // console.log(getfilters[1]);
+
+        // console.log(getfilters[k]);
+        
+        while(getfilters.indexOf(getopt[k]) > -1){
+            getfilters.splice(getfilters.indexOf(getopt[k]), 1);
         }
     }
+
+    // console.log(getfilters);
+    // console.log(getfilters.join(' '));
+
+    ele.className = getfilters.join(' ');
+    // console.log(ele.className);
+}
+
+var getftcontrol = document.getElementById('filtercontrol');
+var getlis = getftcontrol.getElementsByClassName('list-inline-item');
+
+for(var i = 0; i < getlis.length; i++){
+    getlis[i].addEventListener("click", function(){
+        var curractives = document.querySelector('.activeitems');
+        curractives.className = curractives.className.replace(' activeitems', '');
+
+        this.className += ' activeitems';
+    });
 }
 
 // End Property Section
 
 // End JS Area
+
+// const x = ['red', 'green', 'blue', 'yellow', 'pink'];
+// const y = x.splice(1,2);
+// console.log(x, y);
+
+// const x = ['filter', 'room', 'show'];
+// const y = x.splice(1,1);
+// console.log(x, y);
+
+// console.log(x.indexOf('show') > -1);
+// console.log(x.splice(x.indexOf('show'), 1));
+// console.log(x);
+
+// while(x.indexOf('show') > -1){
+//     console.log(x.splice(x.indexOf('show'), 1));
+// }
+
+// console.log("happy sad".indexOf(""));
