@@ -477,3 +477,88 @@ header{
 }
 
 /* End Contact Section */
+
+/* Start Chat Box */
+
+.chat-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    color: #fff;
+
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    opacity: 0.8;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+.chat-popup{
+    background-color: #fff;
+    border: 3px solid #f3f3f3;
+
+    position: fixed;
+    right: 15px;
+    bottom: 0;
+    z-index: 10;
+}
+
+.chat-container{
+    max-width: 300px;
+    padding: 10px;
+}
+
+.messages{
+    overflow-y: scroll;
+}
+
+.chat-container textarea{
+    width: 100%;
+    background-color: #f2f2f2;
+
+    border: none;
+    outline: none;
+    margin: 5px auto;
+
+    resize: none;
+}
+
+.chat-container textarea:focus{
+    background-color: #ddd;
+}
+
+.chat-container .btns{
+    width: 100%;
+    background-color: steelblue;
+    color: #fff;
+
+    border: none;
+    outline: none;
+    margin-bottom :10px;
+
+    opacity: 0.8;
+
+    cursor: pointer;
+}
+
+.chat-container .btns:nth-of-type(2){
+    background-color: red;
+}
+
+.chat-btn:hover,
+.chat-container .btns:hover{
+    opacity: 1;
+}
+
+/* End Chat Box */

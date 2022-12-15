@@ -291,3 +291,10 @@ function tabbox(link, evn, btncolor){
 document.getElementById("autoclick").click();
 
 // End Contact Section
+
+// Start Footer Section
+
+const getyear = document.getElementById("getyear");
+getyear.innerText = new Date().getFullYear();
+
+// End Footer Section
