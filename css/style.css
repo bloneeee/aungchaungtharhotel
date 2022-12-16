@@ -508,6 +508,8 @@ header{
     background-color: #fff;
     border: 3px solid #f3f3f3;
 
+    display: none;
+
     position: fixed;
     right: 15px;
     bottom: 0;
@@ -520,6 +522,7 @@ header{
 }
 
 .messages{
+    height: 200px;
     overflow-y: scroll;
 }
 
@@ -559,6 +562,30 @@ header{
 .chat-btn:hover,
 .chat-container .btns:hover{
     opacity: 1;
+}
+
+.admin{
+    background-color: #aaa;
+}
+
+.user{
+    background-color: #ddd;
+}
+
+.containers{
+    padding: 15px;
+    position: relative;
+}
+
+.time-left{
+    color: #777;
+}
+
+.time-right{
+    color: #777;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 /* End Chat Box */

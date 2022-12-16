@@ -298,3 +298,17 @@ const getyear = document.getElementById("getyear");
 getyear.innerText = new Date().getFullYear();
 
 // End Footer Section
+
+// Start Chat Box
+
+const getmychat = document.getElementById("mychat");
+
+function openchatbox(){
+    getmychat.style.display = "block";
+}
+
+function closechatbox(){
+    getmychat.style.display = "none";
+}
+
+// End Chat Box

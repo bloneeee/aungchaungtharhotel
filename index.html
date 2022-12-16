@@ -30,19 +30,19 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Rooms</a>
+                                <a href="#room" class="nav-link">Rooms</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Blog</a>
+                                <a href="#blog" class="nav-link">Blog</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Restaurant</a>
+                                <a href="#services" class="nav-link">Restaurant</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Contact</a>
+                                <a href="#contact" class="nav-link">Contact</a>
                             </li>
 
                             <li class="nav-item dropdowns">
@@ -790,7 +790,7 @@
         <!-- End Footer Section -->
 
         <!-- START CHAT BOX -->
-        <button class="chat-btn" onclick="">
+        <button class="chat-btn" onclick="openchatbox()">
             <i class="fas fa-comment-alt"></i>
         </button>
 
@@ -799,22 +799,22 @@
                 <h4>Chat</h4>
 
                 <div class="messages">
-                    <div class="contianers admin">
+                    <div class="containers admin">
                         <p>Hello! How can i help you ?</p>
                         <span class="time-right">13:00</span>
                     </div>
 
-                    <div class="contianers user">
+                    <div class="containers user">
                         <p>Thanks for your reply!</p>
                         <span class="time-left">13:01</span>
                     </div>
 
-                    <div class="contianers admin">
+                    <div class="containers admin">
                         <p>Do you want to reserve room ?</p>
                         <span class="time-right">13:03</span>
                     </div>
 
-                    <div class="contianers user">
+                    <div class="containers user">
                         <p>Sure! let me seet the price for mountain view.</p>
                         <span class="time-left">13:04</span>
                     </div>
@@ -824,7 +824,7 @@
                     <textarea name="messsage" id="message" class="message" placeholder="Messsage Here..."></textarea>
 
                     <button type="submit" class="btns">Send</button>
-                    <button type="button" class="btns" onclick="">Close</button>
+                    <button type="button" class="btns" onclick="closechatbox()">Close</button>
                 </form>
             </div>
         </div>
